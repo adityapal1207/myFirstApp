@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const movies= require('../models/movies')
+const movies= require('../models/movies');
+
 // router.get('/name',(req ,res) => {
 //     res.send({ 
 //         name:'Aditya Kumar Pal',
@@ -64,26 +65,25 @@ router.put('/movies/:id',(req ,res) => {
     
 router.get('/movies/:id',(req ,res) => {
 
-    console.log(`This is the GET value movies id${req.params.id} `, movies);
+    console.log(`This is the GET value movies id ${req.params.id} `,movies);
     const {name}=req.query;
      let movie={};
     movies.forEach(element =>{
         if(element.name===name){
-            movie=element;
+            movie=element
         }
     })
      res.send(movie);
+     
     });
 
 
     
 router.get('/movies/',(req ,res) => {
 
-    console.log(` This is the GET  list of movies`);
-    
-    
+    console.log(` This is the GET  list of movies`)
         res.send({ 
-            name:'nohub',
+            name:'nohub Academy',
             class:'test'
         });
     });

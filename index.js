@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const route = require('./controller/movies');
+const todoRoute = require('./routes/todo');
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 
 
 app.use('/api/',route);
+app.use('/todo/',todoRoute);
 app.use('/static/',express.static('public'));
 app.use('/images',express.static('public/images'));
 

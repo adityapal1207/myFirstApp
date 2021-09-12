@@ -4,9 +4,9 @@
   "description": "This is my first nodejs app",
   "main": "index.js",
   "scripts": {
-    "start":"node index",
-    "prestart":"npm i",
-    "dev":"nodemon index",
+    "start": "node index",
+    "prestart": "npm i",
+    "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
